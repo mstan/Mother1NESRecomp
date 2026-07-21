@@ -1,0 +1,81 @@
+# Mother 1 / EarthBound Zero (NES) -- NESRecomp configuration
+#
+# iNES header:
+#   Mapper 4 / MMC3
+#   16 x 16 KiB PRG ROM banks
+#   32 x 8 KiB CHR ROM banks
+#   Battery-backed SRAM
+
+[game]
+name = "Mother 1"
+output_prefix = "mother1"
+
+# Keep the 6502 stack mirrored for interpreter fallback on missed dispatches.
+push_all_jsr = true
+
+[functions]
+fixed = [
+    0xFE0D,
+    0xCB52,
+    0xD15E,
+    0xD548,
+    0xDA7A,
+    0xDADE,
+    0xDAE5,
+    0xF1F9,
+    0xF1D4,
+    0xF919,
+    0xFE1E,
+    0xF3C6,
+    0xC31F,
+    0xC2F8,
+    0xE4A2,
+    0xC226,
+    0xE495,
+    0xF807,
+    0xF7C4,
+    0xDDF6,
+    0xF102,
+    0xFF8A,
+    0xFDAA,
+]
+
+bank8 = [
+    0x83DF,
+    0x843F,
+    0x8AA2,
+    0x99F1,
+    0x9C11,
+]
+
+bank10 = [
+    0x9E2B,
+    0x8D00,
+    0x828E,
+    0x9406,
+    0x941B,
+    0x94E0,
+    0x94EB,
+    0x81C6,
+    0x9D66,
+]
+
+bank9 = [
+    0xBE88,
+    0xA087,
+    0xBE1E,
+    0xA001,
+    0xA026,
+]
+
+bank12 = [
+    0xA28B,
+    0xAF33,
+    0xBE88,
+    0xA2B3,
+    0xA31E,
+]
+
+bank14 = [
+    0x820D,
+]

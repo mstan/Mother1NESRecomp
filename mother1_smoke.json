@@ -1,0 +1,11 @@
+{
+  "frames_run": 300,
+  "dispatch_miss_count": 0,
+  "dispatch_miss_unique": 0,
+  "dispatch_misses": [],
+  "frame_hashes": {
+    "0": "07673647",
+    "100": "d6a72185",
+    "200": "d6a72185"
+  }
+}
