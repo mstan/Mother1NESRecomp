@@ -33,7 +33,11 @@ add_executable(Mother1NESRecomp
     ${MOTHER1_GEN}
 )
 
-target_compile_definitions(Mother1NESRecomp PRIVATE RECOMP_STACK_TRACKING WATCHDOG_ENABLED)
+target_compile_definitions(Mother1NESRecomp PRIVATE
+    NESRECOMP_SPLIT_PARTS_EXTERNAL
+    RECOMP_STACK_TRACKING
+    WATCHDOG_ENABLED
+)
 
 target_include_directories(Mother1NESRecomp PRIVATE
     ${NESRECOMP_RUNNER_INCLUDE_DIRS}
