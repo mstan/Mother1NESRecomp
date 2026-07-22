@@ -30,6 +30,11 @@ generation*_probe/
 # Local tools and environment
 /.mcp.json*
 /C:/
+/DEBUG.md
+/_phase*_*.json
+/build.bat
+/build_all.bat
+/build_recompiler.bat
 /banks/
 /disasm_ref/
 /ghidra/
