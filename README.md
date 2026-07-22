@@ -3,19 +3,25 @@
 Static recompilation scaffold for Mother 1 / EarthBound Zero (NES) using
 NESRecomp.
 
-This project contains Mother-specific generated code, game hooks, and a
+This project contains Mother-specific configuration and game hooks plus a
 Dear ImGui launcher wired through the shared `recomp-ui` submodule. It does not
-include a ROM or official box art.
+include a ROM or ROM-derived generated code.
 
 ## ROM
 
-You must supply your own ROM. The currently configured ROM is:
+You must supply your own legally obtained ROM. The configured ROM has:
 
-- `E:\Downloads\EarthBound_Zero_Mother_1-u_202305.nes`
 - Mapper: 4 / MMC3
 - Payload CRC32: `00F0FBBC`
 - Battery-backed SRAM: yes
 - Controllers: one player
+
+Generate the local, ignored `generated/` directory before configuring the
+game build:
+
+```bat
+nesrecomp\build\recompiler\Release\NESRecomp.exe C:\path\to\your\game.nes --game game.toml
+```
 
 ## Build
 
@@ -30,8 +36,14 @@ cmake -S . -B build -G "Visual Studio 17 2022" -A x64
 cmake --build build --config Release
 ```
 
-To regenerate:
+## Third-party material
 
-```bat
-F:\Projects\nesrecomp\nesrecomp\build\recompiler\Release\NESRecomp.exe E:\Downloads\EarthBound_Zero_Mother_1-u_202305.nes --game game.toml
-```
+Mother, EarthBound Beginnings, Nintendo, and the associated game artwork and
+assets are trademarks or copyrighted material of Nintendo and their respective
+owners, including APE Inc. and Pax Softnica. This project is unofficial and is
+not affiliated with or endorsed by Nintendo or those companies.
+
+`boxart.tga` is adapted from the North American EarthBound Beginnings cover
+used for Nintendo Switch Online. It is included only for identification and
+launcher presentation. Source:
+<https://images.launchbox-app.com/9085238f-b09f-4960-a251-61e3ebed990f.jpg>

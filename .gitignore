@@ -1,4 +1,5 @@
 build/
+/generated/
 *.nes
 *.bin
 *.sav
@@ -25,9 +26,6 @@ ISSUES.md
 CLAUDE.md
 *.bat
 !setup.bat
-
-# Generated files from ad hoc ROM names
-generated/EarthBound_Zero_Mother_1-u_202305_*
 
 # Debug tools (not part of release)
 tools/__pycache__/
