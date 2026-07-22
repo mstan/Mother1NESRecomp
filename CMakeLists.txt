@@ -10,10 +10,6 @@ set(NESRECOMP_ROOT ${CMAKE_SOURCE_DIR}/nesrecomp)
 # commit is the gitlink recorded in this repo. After cloning run setup.sh/.bat
 # (git submodule update --init) to fetch them at the recorded commits.
 
-# ---- Nestopia Oracle (optional) ----
-option(ENABLE_NESTOPIA_ORACLE "Build with Nestopia emulator oracle for verify mode" OFF)
-set(NESTOPIA_DIR "${CMAKE_SOURCE_DIR}/nestopia-core" CACHE PATH "Path to nestopia-core source")
-
 include(${NESRECOMP_ROOT}/runner/runner.cmake)
 
 list(APPEND CMAKE_PREFIX_PATH "${NESRECOMP_ROOT}/runner/external/SDL2/cmake")
@@ -49,11 +45,6 @@ target_link_libraries(Mother1NESRecomp PRIVATE ${SDL2_LIBRARIES})
 
 if(WIN32)
     target_link_libraries(Mother1NESRecomp PRIVATE ws2_32)
-endif()
-
-if(ENABLE_NESTOPIA_ORACLE)
-    target_link_libraries(Mother1NESRecomp PRIVATE nestopia_core)
-    target_compile_definitions(Mother1NESRecomp PRIVATE ENABLE_NESTOPIA_ORACLE)
 endif()
 
 if(WIN32)
