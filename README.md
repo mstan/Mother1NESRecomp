@@ -61,3 +61,9 @@ not affiliated with or endorsed by Nintendo or those companies.
 used for Nintendo Switch Online. It is included only for identification and
 launcher presentation. Source:
 <https://images.launchbox-app.com/9085238f-b09f-4960-a251-61e3ebed990f.jpg>
+
+## License
+
+PolyForm Noncommercial 1.0.0 — see [`LICENSE`](LICENSE). Third-party
+components retain their own licenses.
+
